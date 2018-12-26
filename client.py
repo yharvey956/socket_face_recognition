@@ -3,13 +3,13 @@ import socket
 import sys
 import json
 
-#接收参数 一是要识别图像的路径 二是已知小朋友的大头照片位置
+#接收参数 一是要识别图像的路径 二是已知的人脸特征数据位置
 if len(sys.argv) < 2 :
     #参数数量不对
     print('{"result":false,"msg":"\u53c2\u6570\u6570\u91cf\u4e0d\u5bf9"}')
     exit()
 
-hostport = ('127.0.0.1',8898)
+hostport = ('127.0.0.1',8888)
 
 try:
     s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)  #创建TCP socket

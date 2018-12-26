@@ -4,7 +4,7 @@ import json
 import face_recognition
 
 mysocket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-HostPort = ('127.0.0.1',8898)
+HostPort = ('127.0.0.1',8888)
 mysocket.bind(HostPort)  #绑定地址端口
 mysocket.listen(5)  #监听最多5个连接请求
 
@@ -37,14 +37,12 @@ while True:
         #建立人脸特征数据
         def build_face_data_func():
             import build_face_data_class
-            tartget = build_face_data_class.build_face_data()
-            return tartget.run(client_json,face_recognition)
+            return build_face_data_class.build_face_data()
 
         #对比人脸
         def face_rec_func():
             import face_rec_class
-            tartget = face_rec_class.face_rec()
-            return tartget.run(client_json,face_recognition)
+            return face_rec_class.face_rec()
 
         def other():
             #无对应的操作方法
@@ -58,7 +56,7 @@ while True:
                 2:face_rec_func
             }
             func = swicher.get(x,other) #从map中取出方法
-            return func()   #执行
+            return func().run(client_json,face_recognition)   #执行
 
         client.send(bytes(runfunction(int(client_json[0])),'utf8'))  #发送数据给客户端
         print('clientINFO:',str(client_data, 'utf8'))

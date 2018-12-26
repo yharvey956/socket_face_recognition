@@ -6,14 +6,16 @@ import json
 class build_face_data():
 	def run(self, client_json, face_recognition):
 		if len(client_json) < 3:
-			return "{'result':false,'msg':'参数数量不对'}"
+            #参数数量不对
+			return '{"result":false,"msg":"\u53c2\u6570\u6570\u91cf\u4e0d\u5bf9"}'
 
-		rootPath = "D:/Code/Face_recognition/"
+		rootPath = os.getcwd() + "/"
 		image_path = rootPath + client_json[1]
 		save_dir = rootPath + client_json[2]
 
 		if not(os.path.isfile(image_path)):
-			return "{'result':false,'msg':'文件/文件夹路径错误'}"
+			#文件/文件夹路径错误
+			return '{"result":false,"msg":"\u6587\u4ef6\/\u6587\u4ef6\u5939\u8def\u5f84\u9519\u8bef"}'
 
 		if not(os.path.exists(save_dir)):
 			os.makedirs(save_dir)
@@ -24,7 +26,7 @@ class build_face_data():
 		face_encodings = face_recognition.face_encodings(unknown_image, face_locations)
 
 		if len(face_encodings) != 1:
-			return "{'result':false,'msg':'请上传只有一张人脸的照片'}"
+			return '{"result":false,"msg":"\u8bf7\u4e0a\u4f20\u53ea\u6709\u4e00\u5f20\u4eba\u8138\u7684\u7167\u7247"}'
 
 		# 获取文件名不包含后缀
 		(filepath, tempfilename) = os.path.split(image_path)

@@ -10,7 +10,7 @@ class face_rec():
             return '{"result":false,"msg":"\u53c2\u6570\u6570\u91cf\u4e0d\u5bf9"}'
 
         start = time.clock()
-        rootPath = "D:/Code/Face_recognition/"
+        rootPath =  os.getcwd() + "/"
         image_path = rootPath + client_json[1]
         child_pic_dir = rootPath + client_json[2]
         face_names = []
