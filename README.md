@@ -28,7 +28,7 @@ Face_Recognition安装
 
 	    python client.py 1 img\obama.jpg faces
 
-![Image text](https://raw.githubusercontent.com/hongmaju/light7Local/master/img/productShow/20170518152848.png)
+![Image text](https://raw.githubusercontent.com/yharvey956/socket_face_recognition/master/screenshots/commad%20(1).png)
 
        提取传入图片的人脸特征数据存储到faces文件夹
        
@@ -38,7 +38,7 @@ Face_Recognition安装
 
 	    python client.py 2 img\unknown.jpg faces
 	    
-![Image text](https://raw.githubusercontent.com/hongmaju/light7Local/master/img/productShow/20170518152848.png)	    
+![Image text](https://raw.githubusercontent.com/yharvey956/socket_face_recognition/master/screenshots/commad%20(2).png)	    
 	    
         提取传入图片的人脸特征数据与faces文件夹里存储的人脸数据进行对比查找对应的人
        
