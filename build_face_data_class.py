@@ -6,7 +6,7 @@ import json
 class build_face_data():
 	def run(self, client_json, face_recognition):
 		if len(client_json) < 3:
-            #参数数量不对
+			#参数数量不对
 			return '{"result":false,"msg":"\u53c2\u6570\u6570\u91cf\u4e0d\u5bf9"}'
 
 		rootPath = os.getcwd() + "/"
@@ -16,7 +16,6 @@ class build_face_data():
 		if not(os.path.isfile(image_path)):
 			#文件/文件夹路径错误
 			return '{"result":false,"msg":"\u6587\u4ef6\/\u6587\u4ef6\u5939\u8def\u5f84\u9519\u8bef"}'
-
 		if not(os.path.exists(save_dir)):
 			os.makedirs(save_dir)
 

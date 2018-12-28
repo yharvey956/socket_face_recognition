@@ -21,7 +21,7 @@ except Exception:
 
 dic = sys.argv
 dic.pop(0)
-user_input = json.dumps(sys.argv)
+user_input = json.dumps(dic)
 
 s.send(bytes(user_input,'utf8')) #发送数据到套接字
 while True:
