@@ -1,5 +1,7 @@
-﻿# 基于Python的人脸识别和对比
-------
+﻿github 地址
+
+	https://github.com/yharvey956/socket_face_recognition
+	
 使用**Face Recognition**人脸识别库检测识别对比人脸。
 
 测试环境
@@ -41,7 +43,7 @@ Face_Recognition安装
 ![Image text](https://raw.githubusercontent.com/yharvey956/socket_face_recognition/master/screenshots/commad%20(2).png)	    
 	    
         提取传入图片的人脸特征数据与faces文件夹里存储的人脸数据进行对比查找对应的人
-       
+        支持传入多个人脸文件夹按照英文逗号隔开 如 python client.py 2 img\unknown.jpg faces1,faces2,faces3...
         执行成功返回数据为识别的人以及人脸位置的左上右下两个坐标点，在40张已有人脸数据下识别两个人脸，消耗时间大约为0.15s
     
     
