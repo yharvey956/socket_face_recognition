@@ -2,7 +2,7 @@ import os
 import json
 import pickle
 import time
-import cv2
+#import cv2
 
 
 class face_rec():
